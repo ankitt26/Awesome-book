@@ -1,3 +1,5 @@
+import displayBook from './displayBook.js';
+
 export default (BookList) => {
   const addbtn = document.getElementById('add-btn');
   const form = document.querySelector('.form');
@@ -16,9 +18,11 @@ export default (BookList) => {
       localStorage.setItem('BookList', toString);
 
       // to hide error
+
       err.classList.remove('error');
       form.title.value = '';
       form.author.value = '';
+      displayBook(BookList);
     }
   });
 };
