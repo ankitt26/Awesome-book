@@ -1,4 +1,4 @@
-import { DateTime } from '../node_modules/luxon/build/es6/luxon.js';
+import { DateTime } from './Luxonn.js';
 
 export default () => {
   const liveTime = document.getElementById('live-time');
