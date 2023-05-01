@@ -1,10 +1,23 @@
+// import { DateTime } from "./node_modules/luxon/build/es6/luxon.js";
+// console.log(DateTime)
 
-import { DateTime } from "./node_modules/luxon/build/es6/luxon.js";
+import { DisplayBook } from './modules/displayBook.js';
+import { AddBook } from './modules/addBook.js';
+import { RemoveBook } from './modules/removeBook.js';
+import { NavLinks } from './modules/navLinks.js';
+import { Time } from './modules/Time.js';
 
-// const greeting = 'Hello, world!';
-
-function sayHello() {
-  console.log(DateTime.DATE_FULL);
+let BookList;
+if (localStorage.getItem('BookList')) {
+  const toParse = JSON.parse(localStorage.getItem('BookList'));
+  BookList = toParse;
+} else {
+  BookList = [];
 }
 
-sayHello();
+NavLinks();
+Time();
+DisplayBook(BookList);
+AddBook(BookList);
+RemoveBook(BookList);
+DisplayBook(BookList);

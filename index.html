@@ -8,8 +8,59 @@
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
-    <h1 class="h1">Heading one here</h1>
-    Hello World!
+    <!-- header -->
+    <header class="header">
+      <nav class="nav">
+        <h3 class="logo">Awesome Books</h3>
+        <ul class="nav-ul">
+          <li class="nav-li active" id="list-li">List</li>
+          <li class="line">|</li>
+          <li class="nav-li" id="addnew-li">Add new</li>
+          <li class="line">|</li>
+          <li class="nav-li" id="contact-li">Contact</li>
+        </ul>
+      </nav>
+      <p id="live-time"></p>
+    </header>
+
+    <!-- Books section -->
+    <main class="main-section">
+      <h2>All Awesome Books</h2>
+      <div id="book-list"></div>
+    </main>
+    <!-- <hr /> -->
+
+    <!-- form  -->
+    <form class="form hide-onload">
+      <h2>Add a new book</h2>
+      <input type="text" id="title" placeholder="Title" />
+      <input type="text" id="author" placeholder="Author" />
+      <button type="button" id="add-btn">Add</button>
+    </form>
+    <span id="error-msg" class="err">Please enter both title and author.</span>
+
+    <!-- contact section -->
+
+    <section class="contact hide-onload">
+      <h2>Contact Information</h2>
+      <p class="contact-para">
+        Do you have any question or just want to say "Hello" ? <br />
+        You can reach out to us!
+      </p>
+
+      <ul class="contact-details">
+        <li class="details">Our e-mail: mail@mail.com</li>
+        <li class="details">Our phone number: 002568444741</li>
+        <li class="details">
+          Our address: Street buvr main 22, 400405 City , Country
+        </li>
+      </ul>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <p id="copyright">©️ Copyright @2020</p>
+    </footer>
 
     <script type="module" src="./index.js"></script>
   </body>
