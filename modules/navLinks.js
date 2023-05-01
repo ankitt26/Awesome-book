@@ -1,5 +1,5 @@
 // to hide and show
-const NavLinks = () => {
+export default () => {
   const main = document.querySelector('.main-section');
   const form = document.querySelector('.form');
   const contact = document.querySelector('.contact');
@@ -41,5 +41,3 @@ const NavLinks = () => {
     addnew.classList.remove('active');
   });
 };
-
-export { NavLinks };

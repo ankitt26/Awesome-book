@@ -1,7 +1,7 @@
-const DisplayBook = (BookList) => {
+export default (BookList) => {
   const books = document.getElementById('book-list');
   books.innerHTML = ''; // Clear the books div
-  BookList = BookList.forEach((Book, index) => {
+  BookList.forEach((Book, index) => {
     const div = document.createElement('div');
     div.className = 'book';
     div.innerHTML = `
@@ -11,5 +11,3 @@ const DisplayBook = (BookList) => {
     books.appendChild(div);
   });
 };
-
-export { DisplayBook };

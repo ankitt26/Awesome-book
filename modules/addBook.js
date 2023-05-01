@@ -1,4 +1,4 @@
-const AddBook = (BookList) => {
+export default (BookList) => {
   const addbtn = document.getElementById('add-btn');
   const form = document.querySelector('.form');
   const err = document.getElementById('error-msg');
@@ -7,7 +7,7 @@ const AddBook = (BookList) => {
     const bookname = form.title.value;
     const bookAuthor = form.author.value;
 
-    if (bookname == '' || bookAuthor == '') {
+    if (bookname === '' || bookAuthor === '') {
       err.classList.add('error');
     } else {
       const newBook = { Title: bookname, Author: bookAuthor };
@@ -22,5 +22,3 @@ const AddBook = (BookList) => {
     }
   });
 };
-
-export { AddBook };
