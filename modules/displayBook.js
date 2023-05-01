@@ -5,7 +5,7 @@ export default (BookList) => {
     const div = document.createElement('div');
     div.className = 'book';
     div.innerHTML = `
-    <h2 class="title">${Book.Title} &nbsp; by &nbsp; ${Book.Author}</h2>
+    <p class="title">${Book.Title} &nbsp; by &nbsp; ${Book.Author}</p>
     <button class="toRemove" data-index="${index}">Remove</button>
     `;
     books.appendChild(div);
