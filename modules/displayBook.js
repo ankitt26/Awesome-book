@@ -1,4 +1,7 @@
-export default (BookList) => {
+import fetchLocal from './fetchLocal.js';
+
+export default () => {
+  const BookList = fetchLocal();
   const books = document.getElementById('book-list');
   books.innerHTML = ''; // Clear the books div
   BookList.forEach((Book, index) => {
