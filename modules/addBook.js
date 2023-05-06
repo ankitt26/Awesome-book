@@ -1,11 +1,13 @@
 import displayBook from './displayBook.js';
+import fetchLocal from './fetchLocal.js';
 
-export default (BookList) => {
+export default () => {
   const addbtn = document.getElementById('add-btn');
   const form = document.querySelector('.form');
   const err = document.getElementById('error-msg');
 
-  addbtn.addEventListener('click', () => {
+  const addtheItem = () => {
+    const BookList = fetchLocal();
     const bookname = form.title.value;
     const bookAuthor = form.author.value;
 
@@ -23,6 +25,16 @@ export default (BookList) => {
       form.title.value = '';
       form.author.value = '';
       displayBook(BookList);
+    }
+  };
+
+  addbtn.addEventListener('click', () => {
+    addtheItem();
+  });
+
+  form.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      addtheItem();
     }
   });
 };
